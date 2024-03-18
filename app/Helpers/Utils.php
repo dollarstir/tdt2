@@ -335,7 +335,14 @@ public static function showSummaryResutls($data)
         </div>
     </div>';
 }
+
+
+
+
+// gett path to assets folder
+public static function  assetPath(): string {
+    return 'app/View/assets';
 }
 
 
-
+}

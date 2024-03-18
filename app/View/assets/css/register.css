@@ -1,0 +1,37 @@
+body {
+    background: url('your-background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  .container {
+    padding-top: 50px;
+  }
+  .card {
+    margin-top: 20px;
+  }
+  .card-header {
+    background-color: #fff;
+    border-bottom: 0;
+  }
+  .btn-custom {
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+  .btn-custom:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+  }
+
+  .step {
+    display: none;
+  }
+  .step.active {
+    display: block;
+  }
+  .btn-custom {
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+  .btn-custom:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+  }
