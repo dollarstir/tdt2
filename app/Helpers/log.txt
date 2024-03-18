@@ -1,0 +1,6 @@
+{"message":"Path cannot be empty","line":46,"code":0,"file":"\/var\/www\/html\/task1\/helpers\/Utils.php","date":"2024-03-15 06:52:01","other":""}
+{"message":"Path cannot be empty","line":46,"code":0,"file":"\/var\/www\/html\/task1\/helpers\/Utils.php","date":"2024-03-15 06:52:01","other":""}
+{"message":"Path cannot be empty","line":46,"code":0,"file":"\/var\/www\/html\/task1\/helpers\/Utils.php","date":"2024-03-15 06:52:01","other":""}
+{"message":"Path cannot be empty","line":46,"code":0,"file":"\/var\/www\/html\/task1\/helpers\/Utils.php","date":"2024-03-15 06:52:01","other":""}
+{"message":"SQLSTATE[42S02]: Base table or view not found: 1146 Table 'car.client_cars' doesn't exist","line":8,"code":"42S02","file":"C:\\xampp\\htdocs\\task1\\helpers\\Query.php","date":"2024-03-17 09:48:21","other":""}
+{"message":"Call to a member function prepare() on null","line":7,"code":0,"file":"C:\\xampp\\htdocs\\task1\\app\\Helpers\\Query.php","date":"2024-03-17 23:21:40","other":""}

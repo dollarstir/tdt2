@@ -1,0 +1,599 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#map {
+    height: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    z-index: 2;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    width: 80%;
+}
+
+.service-request {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.input-group {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.input-group-text {
+    background-color: #ffffff;
+    border-radius: 0.25rem 0 0 0.25rem;
+    border-right: none;
+}
+
+.form-control {
+    border-radius: 0 0.25rem 0.25rem 0;
+    position: relative;
+}
+
+.input-group-text .btn {
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+.input-group-text .btn img {
+    width: 20px;
+    height: auto;
+}
+
+#servicePanel {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 20px;
+    display: none;
+}
+
+.service-option {
+    display: flex;
+    justify-content: space-around;
+}
+
+.service-option div {
+    text-align: center;
+}
+
+
+
+.selected {
+background-color: #4CAF50; /* Green background for selected item */
+color: white; /* White text color for selected item */
+}
+
+/* Style for unselected service options */
+.service-option .option {
+cursor: pointer; /* Change mouse to pointer on hover */
+padding: 10px;
+border: 2px solid transparent; /* Transparent border for a consistent box size */
+border-radius: 4px; /* Rounded corners for aesthetics */
+transition: all 0.3s; /* Smooth transition for hover effect */
+}
+
+.service-option .option:hover {
+border-color: #ddd; /* Highlight border on hover */
+}
+
+
+        .modal-content {
+            padding: 20px;
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .btn-select-car, #btnAddCar {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .custom-file-label::after {
+            content: "Browse";
+        }
+
+        .card-header .btn-link {
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .card-header .btn-link .fas {
+            transition: transform 0.2s ease-in-out;
+        }
+        
+        .card-header .collapsed .fa-minus {
+            display: none;
+        }
+        
+        .card-header .collapsed .fa-plus {
+            display: inline;
+        }
+        
+        .card-header .fa-minus {
+            display: inline;
+        }
+        
+        .card-header .fa-plus {
+            display: none;
+        }
+        
+/* Custom File Input - To change appearance of file input fields */
+.custom-file-input {
+    cursor: pointer;
+  }
+  .custom-file-input:lang(en)::after {
+    content: "Browse";
+  }
+  .custom-file-label {
+    overflow: hidden;
+  }
+  
+  /* Style the file input to look more like the design */
+  .custom-file-label::after {
+    content: "Upload";
+    background: #007bff;
+    color: white;
+    padding: 0.375rem 0.75rem;
+  }
+  
+  /* Vehicle Damage Options */
+  .vehicle-damage .form-check {
+    margin-right: 1rem; /* Add some space between the radio buttons */
+  }
+  .vehicle-damage .form-check-input {
+    cursor: pointer;
+  }
+  .vehicle-damage .form-check-label {
+    margin-left: 0.25rem; /* Space after the radio button */
+  }
+  
+  /* Text Area */
+  #damageComments {
+    resize: none; /* Prevent resizing */
+  }
+  
+  /* Button Style */
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+
+  /* image thumbnail */
+
+  .image-upload-container {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .image-upload-label {
+    display: inline-block;
+    width: 100%;
+    padding: .375rem .75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  }
+  
+  .image-upload-label:hover {
+    background-color: #dde2e6;
+  }
+  
+  .img-thumbnail {
+    width: 100%;
+    height: auto;
+    max-height: 150px; /* You can set a max-height */
+    object-fit: cover;
+  }
+
+
+  /* color select css */
+
+  .list-group-item-action.selected {
+    background-color: #eaefe9; /* Or any other highlight color */
+}
+
+.car-image {
+    width: 100px;
+    height: auto;
+}
+
+.color-indicator {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #052a1f;
+}
+
+.check-icon {
+    display: none; /* Initially hidden, shown when selected */
+}
+
+  
+
+/* form Wizard css */
+.step {
+  display: none;
+}
+.step.active {
+  display: block;
+}
+
+
+
+/* payment card style */
+.pcardselection .list-group-item {
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pcardselectioninput[type="radio"] {
+  display: none; /* Hide the default radio button */
+}
+
+.pcardselectioninput[type="radio"]:checked + .card-radio-label {
+  background-color: #f0f0f0; /* Background color for selected item */
+}
+
+.pcardselection.card-radio-label {
+  display: block;
+  width: 100%;
+  padding: 10px;
+}
+
+.pcardselection.card-radio-label:hover {
+  background-color: #e9ecef; /* Slight background color on hover for better UX */
+}
+
+
+/* id verification  section  */
+
+.verification-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.verification-header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.verification-header .close {
+  float: right;
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: none;
+  opacity: 1;
+}
+
+.upload-area {
+  border: 2px dashed #4CAF50;
+  border-radius: 5px;
+  padding: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.upload-icon {
+  font-size: 2rem;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.upload-instructions {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.upload-action {
+  color: #4CAF50;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.verification-container .submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+}
+
+.verification-container input[type="file"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.profile-pic {
+  border-radius: 50%;
+}
+
+.verification-container.icon-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #4CAF50;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
+  font-size: 1rem;
+}
+
+
+
+/* car packages  css  */
+.service-card {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.service-card h5 {
+  color: #4CAF50;
+  margin-bottom: 10px;
+}
+
+.service-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-card ul li {
+  padding: 5px 0;
+}
+
+.service-card .price {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.service-card .duration {
+  background-color: #4CAF50;
+  color: white;
+  padding: 5px 10px;
+  display: inline-block;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.select-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.service-card.active {
+  border-color: #4CAF50;
+}
+
+.bottom-controls {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+
+/* addon  cards css */
+
+.service-Addoncard {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 10px;
+ 
+}
+
+.service-Addoncard h5 {
+  color: #6740af;
+  margin-bottom: 10px;
+}
+
+.service-Addoncard ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-Addoncard ul li {
+  padding: 5px 0;
+}
+
+.service-Addoncard .price {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.service-Addoncard .duration {
+  background-color: #4CAF50;
+  color: white;
+  padding: 5px 10px;
+  display: inline-block;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.select-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.service-Addoncard.active {
+  border-color: #4CAF50;
+}
+
+.bottom-controls {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+
+/* new payment */
+.selectable {
+  cursor: pointer;
+}
+
+.selectable.selected {
+  background-color: #d1e7dd; /* Bootstrap's .bg-light.success color, adjust as needed */
+  border-left: 4px solid #0f5132; /* Bootstrap's .border-success color, adjust as needed */
+}
+
+
+#cardImageContainer {
+  border: none;
+  background-color: transparent;
+}
+
+.input-group-prepend .input-group-text {
+  border-right: none;
+}
+
+#cardNumber {
+  border-left: none;
+}
+
+/* Adjust the padding if necessary to align the image with the input text */
+.input-group-text {
+  padding: 0.375rem 0.75rem;
+}
+
+
+/* id upload message  */
+.verification-message-box {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* save date time   container  */
+#dateTimeSection {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Adjust this to fit the design */
+  max-width: 600px; /* Adjust this to fit the design */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.date-time-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.date-selector,
+.time-selector {
+  display: flex;
+  flex-direction: column;
+}
+
+.date-selector label,
+.time-selector label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.date-selector input,
+.time-selector input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+#saveDateTime {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#saveDateTime:hover {
+  background-color: #45a049;
+}
+
